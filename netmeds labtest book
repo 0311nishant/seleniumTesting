@@ -1,0 +1,57 @@
+package Testexecution;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeMethod;
+
+public class netmeds {
+
+	
+	
+	public static void main(String[] args) throws InterruptedException {
+
+		WebDriver src;
+		src = new FirefoxDriver();
+		src.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+		
+	    src.get("https://netmeds.com");	
+	    WebElement labt = src.findElement(By.xpath("//div[@class='explorer-menu']/ul/li[3]/a[text()='Lab Tests']"));
+		//src.findElement(By.xpath("//a[@class='b-check']"));
+		labt.click();
+		//src.navigate().refresh();
+		Thread.sleep(5000);
+//		WebElement patho = src.findElement(By.xpath("//a[text()='Pathology']"));
+//		patho.click();
+		WebElement name = src.findElement(By.name("diagnosis_name"));
+		name.sendKeys("Unkown man");
+		Thread.sleep(2000);
+		WebElement Num = src.findElement(By.name("diagnosis_mobi"));
+		//src.findElement(By.xpath("//input[@class='Required_diagnosis_phone validate_diagnosis_phone']"));
+		Num.sendKeys("0123456789");
+		Thread.sleep(2000);
+		WebElement Pin = src.findElement(By.name("diagnosis_pincode"));
+		Pin.sendKeys("201992");
+		Thread.sleep(2000);
+		WebElement nhealth = src.findElement(By.xpath("//select[@id='diagnosis_states']"));
+		Select netmeds = new Select (nhealth);
+		netmeds.selectByIndex(5);
+		WebElement tests = src.findElement(By.xpath("//textarea[@class='select2-search__field']"));
+		tests.click();
+		tests.sendKeys("Cal");
+		tests.sendKeys(Keys.ENTER);
+		src.findElement(By.xpath("//input[@id='terms']")).click();
+		src.findElement(By.xpath("//input[@class='diagnosis_submit']")).click();
+		
+	}
+
+}
