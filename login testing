@@ -1,0 +1,123 @@
+package Testexecution;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+//Test suite
+public class logintesting {
+
+	WebDriver ecx;
+	
+	
+	
+	//Test case #1
+	@Test(enabled = true)
+	public void Apositivecase () throws InterruptedException {
+		ecx = new FirefoxDriver();
+		
+		ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		ecx.get("https://practicetestautomation.com/practice-test-login/");
+		ecx.findElement(By.id("username")).sendKeys("student");
+		ecx.findElement(By.id("password")).sendKeys("Password123");
+		Thread.sleep(5000);
+		ecx.findElement(By.id("submit")).click();
+		Thread.sleep(4000);
+		ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+		
+	}
+	//Test Case #2
+	@Test (enabled = true)
+	public void Bnegative1() throws InterruptedException {
+ecx = new FirefoxDriver();
+		
+		ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		ecx.get("https://practicetestautomation.com/practice-test-login/");
+		ecx.findElement(By.id("username")).sendKeys("Nishant");
+		ecx.findElement(By.id("password")).sendKeys("Password123");
+		Thread.sleep(5000);
+		ecx.findElement(By.id("submit")).click();
+		Thread.sleep(4000);
+		ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+	}
+	//Test Case #3
+	@Test (enabled = true)
+	public void Cnegative2() throws InterruptedException {
+ecx = new FirefoxDriver();
+		
+		ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		ecx.get("https://practicetestautomation.com/practice-test-login/");
+		ecx.findElement(By.id("username")).sendKeys("Student");
+		ecx.findElement(By.id("password")).sendKeys("Password123");
+		Thread.sleep(5000);
+		ecx.findElement(By.id("submit")).click();
+		Thread.sleep(4000);
+		ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+	}
+	//Test Case #4
+	@Test (enabled = true)
+	public void Dnegative3() throws InterruptedException {
+ecx = new FirefoxDriver();
+		
+		ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		ecx.get("https://practicetestautomation.com/practice-test-login/");
+		ecx.findElement(By.id("username")).sendKeys("1212@@");
+		ecx.findElement(By.id("password")).sendKeys("Password123");
+		Thread.sleep(5000);
+		ecx.findElement(By.id("submit")).click();
+		Thread.sleep(4000);
+		ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+	}
+	//Test Case #5
+	@Test (enabled = true)
+	public void Enegative3() throws InterruptedException {
+ecx = new FirefoxDriver();
+		
+		ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		ecx.get("https://practicetestautomation.com/practice-test-login/");
+		ecx.findElement(By.id("username")).sendKeys("");
+		ecx.findElement(By.id("password")).sendKeys("");
+		Thread.sleep(5000);
+		ecx.findElement(By.id("submit")).click();
+		Thread.sleep(4000);
+		ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+	}
+	//Test Case #6
+		@Test (enabled = true)
+		public void Fnegative3() throws InterruptedException {
+	ecx = new FirefoxDriver();
+			
+			ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			ecx.get("https://practicetestautomation.com/practice-test-login/");
+			ecx.findElement(By.id("username")).sendKeys("Password123");
+			ecx.findElement(By.id("password")).sendKeys("student");
+			Thread.sleep(5000);
+			ecx.findElement(By.id("submit")).click();
+			Thread.sleep(4000);
+			ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+		}
+		//Test Case #7
+				@Test (enabled = true)
+				public void Gnegative3() throws InterruptedException {
+			ecx = new FirefoxDriver();
+					
+					ecx.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+					ecx.get("https://practicetestautomation.com/practice-test-login/");
+					ecx.findElement(By.id("username")).sendKeys("student");
+					ecx.findElement(By.id("password")).sendKeys("Pass2133@");
+					Thread.sleep(5000);
+					ecx.findElement(By.id("submit")).click();
+					Thread.sleep(4000);
+					ecx.findElement(By.xpath("//a[@class='wp-block-button__link has-text-color has-background has-very-dark-gray-background-color']")).click();
+				}
+
+	@AfterMethod
+	public void close () {
+		ecx.close();
+	}
+}
