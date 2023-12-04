@@ -1,0 +1,117 @@
+package Testnganalayzer;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class atexc {
+
+	@Test(retryAnalyzer = analyz.class)
+	public void main () throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		WebDriver exc;
+		
+		exc = new FirefoxDriver();
+		
+		exc.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		exc.get("https://store.steampowered.com/");
+		
+		
+		Actions act = new Actions(exc);
+		
+	
+	   WebElement kate = exc.findElement(By.xpath("//a[@class='pulldown_desktop'][normalize-space()='Categories']"));
+	   kate.click();
+	   
+	   WebElement tpp = exc.findElement(By.xpath("//a[normalize-space()='Third-Person Shooter']"));
+	   tpp.click();
+	   WebElement BR = exc.findElement(By.xpath("//div[contains(text(),'Battle Royale')]"));
+	   BR.click();
+	
+	   
+	   WebElement Search = exc.findElement(By.xpath("//input[@id='store_nav_search_term']"));
+	   Search.sendKeys("PUBG");
+	   
+	   Search.sendKeys(Keys.ENTER);
+	   
+	   exc.findElement(By.xpath("//a[@id='sort_by_trigger']")).click();
+       
+      List<WebElement> dropped = exc.findElements(By.xpath("//ul[@id='sort_by_droplist']/li"));
+      
+      for (WebElement drop : dropped) {
+   	   
+   	   if(drop.getText().equals("Name")) {
+   		   drop.click();
+   		   break;
+ }
+	
+      }    
+	   WebElement SpecialO = exc.findElement(By.xpath("//span[contains(text(),'Special Offers')]"));
+	   SpecialO.click();
+	   
+	   exc.switchTo().newWindow(WindowType.TAB);
+	   
+	   Set <String> ids = exc.getWindowHandles();
+	   Iterator<String> Sw = ids.iterator();
+	   String First = Sw.next();
+	   String Sec = Sw.next();
+	   
+	   exc.switchTo().window(Sec);
+	   exc.get("https://www.pcgamebenchmark.com/");
+	   
+	   
+	   WebElement cpu = exc.findElement(By.xpath("//input[@id='form-hardware-cpu']"));
+	   cpu.sendKeys("intel core i5- 3230M");
+	   Thread.sleep(2000);
+	   //cpu.sendKeys(Keys.ARROW_DOWN);
+	   cpu.sendKeys(Keys.ENTER);
+	   
+	   WebElement gpu = exc.findElement(By.xpath("//input[@id='form-hardware-gpu']"));
+	   gpu.sendKeys("Intel hd 4000");
+	   gpu.sendKeys(Keys.ARROW_DOWN);
+	   gpu.sendKeys(Keys.ENTER);
+	   
+	   
+	   WebElement ram = exc.findElement(By.xpath("//select[@id='form-hardware-memory']"));
+	   Select gb = new Select(ram);
+	   gb.selectByValue("8");
+	   
+	   
+	   WebElement Src = exc.findElement(By.xpath("//button[normalize-space()='What Games Can My PC Run?']"));
+	   Src.click();
+	   
+	   Thread.sleep(4000);
+	   
+	   
+	   
+	   WebElement search = exc.findElement(By.xpath("//input[@placeholder='Search for games to test']"));
+	   search.sendKeys("PUBG");
+	   
+	   Thread.sleep(3000);
+	   search.sendKeys(Keys.ENTER);
+	   
+	   
+	   
+	   
+	  
+	   
+	   
+
+	
+
+}
+	
+}
+
