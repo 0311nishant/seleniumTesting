@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 
 public class atexc {
 
-	@Test(retryAnalyzer = analyz.class)
+	@Test(enabled=true)
 	public void main () throws InterruptedException {
 		// TODO Auto-generated method stub
 		
