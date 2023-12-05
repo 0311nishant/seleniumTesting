@@ -1,101 +1,121 @@
-package nis;
+package GithubProjects;
 
+import java.time.Duration;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
-
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class amazon { 
+	@Test (enabled = true) 
+public void main() throws InterruptedException{
+	
+WebDriver Az = new FirefoxDriver();
 
 
+	
+	Az.get("https://Amazon.in//");
+	Az.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	WebElement srch = Az.findElement(By.id("twotabsearchtextbox"));
+	srch.click();
+	
+	srch.sendKeys("Realme");
+	srch.sendKeys(Keys.ENTER);
+	Thread.sleep(5000);
+	Az.findElement(By.xpath("//a[@class= 'a-link-normal s-navigation-item']/span[text()= 'Android 12.0']")).click();
+    Az.findElement(By.xpath("//a[@class= 'a-link-normal s-navigation-item']/span[text()= '128 GB']")).click();
+    By filter = By.xpath("//span[text()= '5G' or text()= '4G']");
+    WebElement G = Az.findElement(filter);
+    G.click();
+    
+    By Ram = By.xpath("//span[text()='8 to 9.9 GB' or text()='4 to 5.9 GB' or text()='6 to 7.9 GB']");
+    WebElement GB = Az.findElement(Ram);
+    GB.click();
+    
+    
+    Thread.sleep(4000);
+    Az.findElement(By.xpath("//div[@class='sg-col-inner']/div[@class='s-widget-container s-spacing-small s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_1']/span[@class='a-declarative']/div[@class='puis-card-container s-card-container s-overflow-hidden aok-relative puis-include-content-margin puis puis-v3qtjrt7k9fmd120m8r5wbipg0v s-latency-cf-section puis-card-border']/div[@class='a-section']/div[@class='puisg-row']/div[@class='puisg-col puisg-col-4-of-12 puisg-col-8-of-16 puisg-col-12-of-20 puisg-col-12-of-24 puis-list-col-right']/div[@class='puisg-col-inner']/div[@class='a-section a-spacing-small a-spacing-top-small']/div[@class='a-section a-spacing-none puis-padding-right-small s-title-instructions-style']/h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']/a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal']/span[@class='a-size-medium a-color-base a-text-normal']")).click();
+    
 
-public class Az {
+    Set<String> WinH = Az.getWindowHandles();
+    
+    Iterator<String> ItIds= WinH.iterator(); 
+    
+    String win1= ItIds.next();
+    String win2= ItIds.next();
+    
+    Az.switchTo().window(win2);
+    
+    Thread.sleep(4000);
+    
+    
 
-	public static void main(String[] args) throws InterruptedException{
-		// TODO Auto-generated method stub
-		
-		
-		
-		WebDriver Az; 
-		Az = new FirefoxDriver();
-		
-		Az.manage().window().maximize();
-		
-		Az.get("https://Amazon.in//");
-		
-		WebElement srch = Az.findElement(By.id("twotabsearchtextbox"));
-		srch.click();
-		
-		srch.sendKeys("Realme");
-		srch.sendKeys(Keys.ENTER);
-		Thread.sleep(5000);
-		Az.findElement(By.xpath("//a[@class= 'a-link-normal s-navigation-item']/span[text()= 'Android 12.0']")).click();
-        Az.findElement(By.xpath("//a[@class= 'a-link-normal s-navigation-item']/span[text()= '256 GB']")).click();
-        Az.findElement(By.xpath("//a[@class= 'a-link-normal s-navigation-item']/span[text()= '5G']")).click();
-        Az.findElement(By.xpath("//a[@class= 'a-link-normal s-navigation-item']/span[text()= '10 GB & Above']")).click();
+  //By filterSelector1 = By.xpath("//descendant::input[@id='add-to-cart-button'][2]");
+    List<WebElement> element = Az.findElements(By.xpath("//input[@id='add-to-cart-button']"));
+    if (element.size()== 1) {
+    	element.get(0).click();
+    }
+    	else if (element.size() > 1) {
+    		element.get(1).click();
+    		
+    	}
+    
+
         
-        Thread.sleep(4000);
-        Az.findElement(By.xpath("//a[@class= 'a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal']/span[text()= '(Refurbished) OPPO Reno8 Pro 5G (Glazed Black, 256 GB) (12 GB RAM)']")).click();
-
-	
-	    Set<String> WinH = Az.getWindowHandles();
-	    
-	    Iterator<String> ItIds= WinH.iterator(); 
-	    
-	    String win1= ItIds.next();
-	    String win2= ItIds.next();
-	    
-	    Az.switchTo().window(win2);
-	    
-	    Thread.sleep(4000);
-	    
-	    Az.findElement(By.xpath("//input[@id= 'add-to-cart-button']")).click();
-	    
-	    Thread.sleep(4000);
-	    Az.switchTo().window(win1);
-	    
-	    Thread.sleep(4000);
-	    
-	  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).click();
-	  
-	  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).clear();
-	  
-	  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).sendKeys("Nazro N60 hybid cover");
-	  
-	  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).sendKeys(Keys.ENTER);
-	  
-	  Thread.sleep(5000);
-
-	  
-	  
-	  WebElement Cart= Az.findElement(By.xpath("//span[@id= 'nav-cart-count']"));
-	  Cart.click();
-	  
-	  Thread.sleep(3000);
-	  
-	  WebElement delete = Az.findElement(By.xpath("//input[@name='submit.delete.d157b4d7-2bfb-46b7-9b73-8f75f9c2a36c']"));
-	  delete.click();
-	  
-	  Az.close();
-	  
-	  
-	
-	  
-
-	
-	
-	
-	
-	
-	
-	
-	}
+    Thread.sleep(4000);
+    Az.switchTo().window(win1);
+    
+    Thread.sleep(4000);
+    
+  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).click();
+  
+  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).clear();
+  
+  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).sendKeys("Realme hybrid cover");
+  
+  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).sendKeys(Keys.ENTER);
+  Thread.sleep(3000);
+  
+  WebElement Cover = Az.findElement(By.xpath("//img[@alt='RIGGEAR Shockproof Sleek Hybrid Armor Realme 11 Pro, Realme 11 Pro Plus, Narzo 60 Pro 5G Back Cover Case For Phone (Transp...']"));
+  Thread.sleep(3000);
+  Cover.click();
+  
+  
+  Set<String> wint = Az.getWindowHandles();
+  Iterator<String>ids = wint.iterator();
+  String winone = ids.next();
+  String wintwo = ids.next();
+  
+  Az.switchTo().window(wintwo);
+  
+  //Az.findElement(By.xpath("//descendant::input[@id='add-to-cart-button'][2]")).click();
+  List<WebElement> elementtwo = Az.findElements(By.xpath("//input[@id='add-to-cart-button']"));
+  
+  if (elementtwo.size()== 1) {
+  	elementtwo.get(0).click();
+  }
+  	else if (elementtwo.size() > 1) {
+  		elementtwo.get(1).click();
+  		
+  	}
+  Thread.sleep(3000);
+  
+  WebElement gotok = Az.findElement(By.xpath("//span[@id='sw-gtc']/span[@class='a-button-inner']/a[@class='a-button-text']"));
+  gotok.click();
+  
+  Thread.sleep(5000);
+  
+  Az.quit();
 
 }
+
+}
+
+
+
