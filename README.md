@@ -72,7 +72,7 @@ This Selenium automation project is designed to perform various actions on the A
    - [Product Details](https://github.com/0311nishant/seleniumTesting/issues/4#issue-2029113903)
 
 4. **Added in cart:**
-   - [Cart Page]([screenshots/az_cart_page.png](https://drive.google.com/file/d/1CiVJXoSsqe1Xus2zgvke7f-uGlgHTubn/view?usp=sharing))
+   - [Cart Page](https://github.com/0311nishant/seleniumTesting/issues/5#issue-2029114767)
 
 5. **Checkout Page:**
    - [Checkout Page]([screenshots/az_checkout_page.png](https://drive.google.com/file/d/1fW_W6sjr6uhpucB5kTcJ-DnECwT3abTF/view?usp=sharing))
