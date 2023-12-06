@@ -55,6 +55,7 @@ This Selenium automation project is designed to perform various actions on the A
 
 - **Positive Case:**
   - Search for Realme products, apply filters, add to cart, and proceed to checkout.
+  - [Test case](https://docs.google.com/spreadsheets/d/1JzDEklJZEVZtaVZsjqzXKbS7aGh8j5jX/edit?usp=sharing&ouid=101508411653849235851&rtpof=true&sd=true)
 
 
 ## Screenshots
