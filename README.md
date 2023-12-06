@@ -61,21 +61,22 @@ This Selenium automation project is designed to perform various actions on the A
 ## Screenshots
 
 1. **Home Page:**
-   - ![Home Page](screenshots/az_home_page.png)
+   - ![Home Page]([screenshots/az_home_page.png](https://drive.google.com/file/d/1LDLlMQlpLZ3-9tOz7uQg-I5Tiz8pPMns/view?usp=sharing))
 
 2. **Search Results:**
-   - [Search Results](screenshots/az_search_results.png)
-
+   - [Search Results]([screenshots/az_search_results.png](https://drive.google.com/file/d/1NMW-5ICQ2c_dkgbwMo9tOA6qIudBKC5y/view?usp=sharing))
+2.1. **Filters**
+     - [Refining Product]([screenshots/az_search_results.png](https://drive.google.com/file/d/1O3vKhIQ5qljUKLvBTnoHVYOUtuLGCZmS/view?usp=sharing))
+     
 3. **Product Details:**
-   - [Product Details](screenshots/az_product_details.png)
+   - [Product Details]([screenshots/az_product_details.png](https://drive.google.com/file/d/1DS7aifWrxSQR-mDe_g1d3cC4vVDsQi6h/view?usp=sharing))
 
-4. **Cart Page:**
-   - [Cart Page](screenshots/az_cart_page.png)
+4. **Added in cart:**
+   - [Cart Page]([screenshots/az_cart_page.png](https://drive.google.com/file/d/1CiVJXoSsqe1Xus2zgvke7f-uGlgHTubn/view?usp=sharing))
 
 5. **Checkout Page:**
-   - [Checkout Page](screenshots/az_checkout_page.png)
+   - [Checkout Page]([screenshots/az_checkout_page.png](https://drive.google.com/file/d/1fW_W6sjr6uhpucB5kTcJ-DnECwT3abTF/view?usp=sharing))
 
 ## Acknowledgments
 
 Thanks to the Selenium community for providing a powerful automation tool.
-```
