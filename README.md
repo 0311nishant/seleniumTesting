@@ -1,4 +1,4 @@
-# Amazon Selenium Automation with Az WebDriver
+# Amazon Selenium Automation
 
 ## Overview
 
