@@ -8,7 +8,7 @@ This Selenium automation project is designed to perform various actions on the A
 ## Prerequisites
 
 - Firefox browser installed
-- Az WebDriver
+- Website is accessible
 
 ## Installation
 
