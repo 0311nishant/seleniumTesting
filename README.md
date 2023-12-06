@@ -2,7 +2,8 @@
 
 ## Overview
 
-This Selenium automation project is designed to perform various actions on the Amazon website using the Az WebDriver. It covers functionalities such as searching for Realme products, applying filters, adding items to the cart, and proceeding to checkout.
+This Selenium automation project is designed to perform various actions on the Amazon website using the Az WebDriver. It covers functionalities such as searching for Realme products, applying filters, adding items to the cart, and proceeding to checkout. 
+#Automation Script [Amazon](Amazonatk)
 
 ## Prerequisites
 
