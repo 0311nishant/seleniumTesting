@@ -61,7 +61,7 @@ This Selenium automation project is designed to perform various actions on the A
 ## Screenshots
 
 1. **Home Page:**
-   - ![Home Page]([screenshots/az_home_page.png](https://drive.google.com/file/d/1LDLlMQlpLZ3-9tOz7uQg-I5Tiz8pPMns/view?usp=sharing))
+   - ![Home Page]([[screenshots/az_home_page.png](https://drive.google.com/file/d/1LDLlMQlpLZ3-9tOz7uQg-I5Tiz8pPMns/view?usp=sharing)](https://github.com/0311nishant/seleniumTesting/issues/1#issue-2029084717))
 
 2. **Search Results:**
    - [Search Results]([screenshots/az_search_results.png](https://drive.google.com/file/d/1NMW-5ICQ2c_dkgbwMo9tOA6qIudBKC5y/view?usp=sharing))
