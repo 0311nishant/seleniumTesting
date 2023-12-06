@@ -69,7 +69,7 @@ This Selenium automation project is designed to perform various actions on the A
      - [Refining Product](https://github.com/0311nishant/seleniumTesting/issues/3#issue-2029112955)
      
 3. **Product Details:**
-   - [Product Details]([screenshots/az_product_details.png](https://drive.google.com/file/d/1DS7aifWrxSQR-mDe_g1d3cC4vVDsQi6h/view?usp=sharing))
+   - [Product Details](https://github.com/0311nishant/seleniumTesting/issues/4#issue-2029113903)
 
 4. **Added in cart:**
    - [Cart Page]([screenshots/az_cart_page.png](https://drive.google.com/file/d/1CiVJXoSsqe1Xus2zgvke7f-uGlgHTubn/view?usp=sharing))
