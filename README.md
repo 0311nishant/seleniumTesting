@@ -66,7 +66,7 @@ This Selenium automation project is designed to perform various actions on the A
 2. **Search Results:**
    - [Search Results](https://github.com/0311nishant/seleniumTesting/issues/2#issue-2029111242)
 2.1. **Filters**
-     - [Refining Product]([screenshots/az_search_results.png](https://drive.google.com/file/d/1O3vKhIQ5qljUKLvBTnoHVYOUtuLGCZmS/view?usp=sharing))
+     - [Refining Product](https://github.com/0311nishant/seleniumTesting/issues/3#issue-2029112955)
      
 3. **Product Details:**
    - [Product Details]([screenshots/az_product_details.png](https://drive.google.com/file/d/1DS7aifWrxSQR-mDe_g1d3cC4vVDsQi6h/view?usp=sharing))
