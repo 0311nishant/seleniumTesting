@@ -1,5 +1,3 @@
-package GithubProjects;
-
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
@@ -66,56 +64,18 @@ WebDriver Az = new FirefoxDriver();
     		
     	}
     
+    WebElement gotok = Az.findElement(By.xpath("//span[@id='sw-gtc']/span[@class='a-button-inner']/a[@class='a-button-text']"));
+    gotok.click();
+    
 
         
-    Thread.sleep(4000);
-    Az.switchTo().window(win1);
-    
-    Thread.sleep(4000);
-    
-  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).click();
   
-  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).clear();
-  
-  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).sendKeys("Realme hybrid cover");
-  
-  Az.findElement(By.xpath("//input[@id= 'twotabsearchtextbox']")).sendKeys(Keys.ENTER);
-  Thread.sleep(3000);
-  
-  WebElement Cover = Az.findElement(By.xpath("//img[@alt='RIGGEAR Shockproof Sleek Hybrid Armor Realme 11 Pro, Realme 11 Pro Plus, Narzo 60 Pro 5G Back Cover Case For Phone (Transp...']"));
-  Thread.sleep(3000);
-  Cover.click();
-  
-  
-  Set<String> wint = Az.getWindowHandles();
-  Iterator<String>ids = wint.iterator();
-  String winone = ids.next();
-  String wintwo = ids.next();
-  
-  Az.switchTo().window(wintwo);
-  
-  //Az.findElement(By.xpath("//descendant::input[@id='add-to-cart-button'][2]")).click();
-  List<WebElement> elementtwo = Az.findElements(By.xpath("//input[@id='add-to-cart-button']"));
-  
-  if (elementtwo.size()== 1) {
-  	elementtwo.get(0).click();
-  }
-  	else if (elementtwo.size() > 1) {
-  		elementtwo.get(1).click();
-  		
-  	}
-  Thread.sleep(3000);
-  
-  WebElement gotok = Az.findElement(By.xpath("//span[@id='sw-gtc']/span[@class='a-button-inner']/a[@class='a-button-text']"));
-  gotok.click();
-  
-  Thread.sleep(5000);
-  
-  Az.quit();
+    Az.quit();
 
 }
 
 }
+
 
 
 
