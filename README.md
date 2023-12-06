@@ -12,19 +12,44 @@ This Selenium automation project is designed to perform various actions on the A
 ## Installation
 
 1. Clone the repository.
-   ```bash
-   git clone https://github.com/your-username/your-amazon-az-automation.git
-   cd your-amazon-az-automation
-   ```
+   <dependencies>
+	  
+	  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.8.0</version>
+</dependency>
 
-2. Open the project in your preferred Java IDE.
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>
+    <scope>test</scope>
+</dependency>
 
-3. Run the `amazon.java` file to execute the Selenium automation script.
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.1</version>
+</dependency>
+<dependency>
+<groupId>com.aventstack</groupId>
+<artifactId>extentreports</artifactId>
+<version>5.0.9</version>
+</dependency>
 
-## Usage
+  </dependencies>
 
-1. Open the `amazon.java` file.
-2. Run the `main()` method to execute the automation script.
+2. Open this Maven project in IntelliJ or Eclipse.  
+
+3. Run the Automation script as TestNG test.
 
 ## Test Cases
 
