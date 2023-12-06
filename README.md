@@ -61,7 +61,7 @@ This Selenium automation project is designed to perform various actions on the A
 ## Screenshots
 
 1. **Home Page:**
-   - ![Home Page]([[screenshots/az_home_page.png](https://drive.google.com/file/d/1LDLlMQlpLZ3-9tOz7uQg-I5Tiz8pPMns/view?usp=sharing)](https://github.com/0311nishant/seleniumTesting/issues/1#issue-2029084717))
+   - ![Home Page]([[[screenshots/az_home_page.png](https://drive.google.com/file/d/1LDLlMQlpLZ3-9tOz7uQg-I5Tiz8pPMns/view?usp=sharing)](https://github.com/0311nishant/seleniumTesting/issues/1#issue-2029084717)](https://private-user-images.githubusercontent.com/148465214/288499091-80bf6b15-ec70-4d4e-aecf-f6e40e573f49.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE4ODUxNTUsIm5iZiI6MTcwMTg4NDg1NSwicGF0aCI6Ii8xNDg0NjUyMTQvMjg4NDk5MDkxLTgwYmY2YjE1LWVjNzAtNGQ0ZS1hZWNmLWY2ZTQwZTU3M2Y0OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIwNlQxNzQ3MzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zM2NjNDY1MTI5MWI2NTk4NDI2NTE1OWI4NGI3OGZlNjZhZmNhMjFkOGZkYmU4ZTk1MGIyOWQzN2E3YzZlYjhiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.5FyPA8V__FHUDOlPfFoUMufeF3geHVmNL0SFeV0-mks))
 
 2. **Search Results:**
    - [Search Results]([screenshots/az_search_results.png](https://drive.google.com/file/d/1NMW-5ICQ2c_dkgbwMo9tOA6qIudBKC5y/view?usp=sharing))
