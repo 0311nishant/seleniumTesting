@@ -75,7 +75,7 @@ This Selenium automation project is designed to perform various actions on the A
    - [Cart Page](https://github.com/0311nishant/seleniumTesting/issues/5#issue-2029114767)
 
 5. **Checkout Page:**
-   - [Checkout Page]([screenshots/az_checkout_page.png](https://drive.google.com/file/d/1fW_W6sjr6uhpucB5kTcJ-DnECwT3abTF/view?usp=sharing))
+   - [Checkout Page](https://github.com/0311nishant/seleniumTesting/issues/6#issue-2029115480)
 
 ## Acknowledgments
 
