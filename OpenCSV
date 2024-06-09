@@ -1,0 +1,230 @@
+import java.awt.AWTException;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Test;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
+public class Anop {
+
+	    WebDriver driver;
+
+		//@Test(priority = 0)
+		//public void HbyStore () throws InterruptedException {
+
+			/*driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+
+			driver.get("https://app.tryloop.ai/login/password");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+			WebElement email = driver.findElement(By.xpath("//input[@id=':r1:']"));
+			email.sendKeys("qa-engineer-assignment@test.com");
+
+			WebElement pass = driver.findElement(By.xpath("//input[@id=':r2:']"));
+			pass.sendKeys("QApassword123$");
+
+			WebElement Login = driver.findElement(By.xpath("//div[@class='MuiBox-root css-1dhiz0x']"));
+			Login.click();
+
+			WebElement Skip = driver.findElement(By.xpath("//button[text()='Skip for now']"));
+			Skip.click(); 	
+			Thread.sleep(5000);
+
+			WebElement chargeback = driver.findElement(By.xpath("//span[normalize-space()='3P Chargebacks']"));
+			chargeback.click();
+
+			WebElement history = driver.findElement(By.xpath("//span[normalize-space()='History by Store']"));
+			history.click();
+
+			List<WebElement> Rows =
+					driver.findElements(By.xpath("//table[contains(@class,'MuiTable-root')]/tbody/tr"));
+
+			for(int i=1;i<Rows.size()+1;i++) {
+				String Grandtotal;
+				if(i==1) {
+					Grandtotal =driver.findElement(By.xpath("//table[contains(@class,'MuiTable-root')]/tbody/tr["+i+"]/td[10]/h6")).getText();
+				}
+				
+				else 
+				{
+					Grandtotal =driver.findElement(By.xpath("//table[contains(@class,'MuiTable-root')]/tbody/tr["+i+"]/td[9]/h6")).getText();
+				}
+
+				Grandtotal = Grandtotal.replace("$", "");
+				Grandtotal = Grandtotal.replace(",", "");
+				float rowSum = Float.parseFloat(Grandtotal);
+				
+				float colTotal = 0f;
+				for(int j=2;j<=8;j++) {
+
+
+					String colVal =driver.findElement(By.xpath("//table[contains(@class,'MuiTable-root')]/tbody/tr["+i+"]/td["+j+"]/h6")).getText();
+
+					colVal = colVal.replace("$", "");
+					colVal = colVal.replace(",", "");
+					colTotal = (float) (Math.round((colTotal + Float.parseFloat(colVal)) * 100.0) / 100.0);
+
+				}
+
+				if (colTotal == rowSum) {
+
+					System.out.println("Grand Total : "+rowSum);
+					System.out.println("Actual Total : "+colTotal);
+					System.out.println("Grand Total is correct" );
+					System.out.println("_" );
+				}
+				else {
+
+					System.out.println("Grand Total : "+rowSum);
+					System.out.println("Actual Total : "+colTotal);
+					System.out.println("Grand total is incorrect");
+					System.out.println("_" );
+				}
+
+			}
+
+			driver.quit();
+
+		}*/
+
+		@Test (priority = 1)
+		public void Trasaction () throws InterruptedException, AWTException {
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+
+			driver.get("https://app.tryloop.ai/login/password");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+			WebElement email = driver.findElement(By.xpath("//input[@id=':r1:']"));
+			email.sendKeys("qa-engineer-assignment@test.com");
+
+			WebElement pass = driver.findElement(By.xpath("//input[@id=':r2:']"));
+			pass.sendKeys("QApassword123$");
+
+			WebElement Login = driver.findElement(By.xpath("//div[@class='MuiBox-root css-1dhiz0x']"));
+			Login.click();
+
+			WebElement Skip = driver.findElement(By.xpath("//button[text()='Skip for now']"));
+			Skip.click(); 	
+			Thread.sleep(5000); 
+
+			WebElement chargeback = driver.findElement(By.xpath("//span[normalize-space()='3P Chargebacks']"));
+			chargeback.click();
+
+			WebElement transaction = driver.findElement(By.xpath("//span[normalize-space()='Transactions']"));
+			transaction.click();
+
+			WebElement location = driver.findElement(By.xpath("//header[@class='MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1j6y4gn']//button[1]"));
+			location.click();
+
+			WebElement unselect = driver.findElement(By.xpath("//p[text()='Unselect All (109)']"));
+			unselect.click();
+
+			WebElement alchemy = driver.findElement(By.xpath("//p[text()='Artisan Alchemy']"));
+			alchemy.click();
+
+			//List<WebElement> searchb = driver.findElements(By.xpath("//*[contains(@id, 'r')]"));
+			//if (searchb.size()<=21) {
+				//searchb.get(21).sendKeys("Blissful Buffet");
+			//}
+			//WebElement searchb = driver.findElement(By.xpath("//input[@id= ':r64:' or @id=':rj:' or @id = ':rk:' or @id= ':r6v:' ]"));
+			//searchb.sendKeys("Blissful Buffet");
+
+			WebElement buffet = driver.findElement(By.xpath("//p[text()='Blissful Buffet']"));
+			buffet.click();
+
+			WebElement apply = driver.findElement(By.xpath("//div[@class='MuiBox-root css-13ev6ou']/button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-1un93pa-MuiButtonBase-root-MuiButton-root']"));
+			apply.click();
+
+			Thread.sleep(7000);
+			WebElement market = driver.findElement(By.xpath("//span[text()='Marketplaces']"));
+			market.click();
+
+			Thread.sleep(2000);
+			WebElement clear = driver.findElement(By.xpath("//button[text()='Clear']"));
+			clear.click();
+
+			WebElement grubhub = driver.findElement(By.xpath("//p[text()='Grubhub']"));
+			grubhub.click();
+
+			WebElement apply2 = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall css-1un93pa-MuiButtonBase-root-MuiButton-root']"));
+			apply2.click();
+
+			WebElement download = driver.findElement(By.xpath("//button[normalize-space()='Download']"));
+//			int x = download.getLocation().getX();
+//			int y = download.getLocation().getY();
+//			System.out.println(x+" , "+y+ " Coordinates of Download Button");
+
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+			wait.until(ExpectedConditions.elementToBeClickable(download));
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", download);
+			Thread.sleep(6000);
+
+		//	driver.quit();
+		}
+		
+
+		/*    @Test(priority = 2)
+		    public void CSVfile() throws InterruptedException, AWTException, CsvException {
+		        
+		    	String file1Path = "C:\\Users\\hp\\Desktop\\CSVSelfG.csv";
+		        String file2Path = "C:\\Users\\hp\\Desktop\\CSVDownload.csv";
+
+		        try {
+		            List<List<String>> table1 = readCSV(file1Path);
+		            List<List<String>> table2 = readCSV(file2Path);
+
+		            if (areTablesEqual(table1, table2)) {
+		                System.out.println("Data in both tables is the same.");
+		            } else {
+		                System.out.println("Data in both tables is not exactly the same.");
+		            }
+          } catch (IOException e) {
+		            e.printStackTrace();
+		        }
+		    }
+
+		    private static List<List<String>> readCSV(String filePath) throws IOException {
+		        List<List<String>> table = new ArrayList<>();
+		        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+		            String line;
+		            while ((line = br.readLine()) != null) {
+		                String[] values = line.split(",");
+		                List<String> row = new ArrayList<>();
+		                for (String value : values) {
+		                    row.add(value.trim());
+		                }
+		                table.add(row);
+		            }
+		        }
+		        return table;
+		    }
+
+		    private static boolean areTablesEqual(List<List<String>> table1, List<List<String>> table2) {
+		        if (table1.size() != table2.size()) {
+		            return false;
+		        }
+		        for (int i = 0; i < table1.size(); i++) {
+		            List<String> row1 = table1.get(i);
+		            List<String> row2 = table2.get(i);
+		            if (!row1.equals(row2)) {
+		                return false;
+		            }
+		        }
+		        return true;
+		     }*/
+		 
+		    }
+
